@@ -1,0 +1,2 @@
+$VOI_ElementDataFile;$VOI_ElementDataFilePath;$VOI_ElementType;$VOI_DimSize_x;$VOI_DimSize_y;$VOI_DimSize_z;$VOI_ElementSpacing_x;$VOI_ElementSpacing_y;$VOI_ElementSpacing_z;$VOI_Size_x;$VOI_Size_y;$VOI_Size_z;$VOI_Offset_x;$VOI_Offset_y;$VOI_Offset_z;$minVal;$maxVal;$voxSum;$graySum;$xsVox;$ysVox;$zsVox;$Date;$Time;$MID_Pos_x;$MID_Pos_y;$MID_Pos_z;
+phantom_cut.mhd;na;None;108;29;191;0.996093;0.996093;1;107.578;28.8867;191;-51.1329;264.117;-6.19995;-1024;469;598212;1.68307e+06;na;na;na;11 Dec 2023;09:51:04;54;14;95;
