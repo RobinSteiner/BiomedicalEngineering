@@ -66,12 +66,12 @@
     \subsubsection{}
     The following code solves and plots the ODE $y’=-20y$ using the built-in solver 'RK45'.
     \begin{lstlisting}[language=Python, style=mystyle]
-def odefun(t, y): return -20 * y
-sol = integrate.solve_ivp(odefun, [0, 1], [y0], method='RK45')
+    def odefun(t, y): return -20 * y
+    sol = integrate.solve_ivp(odefun, [0, 1], [y0], method='RK45')
 
-...
-ax.plot(sol.t,sol.y[0],label='RK45')
-...
+    [...]
+    ax.plot(sol.t,sol.y[0],label='RK45')
+    [...]
     \end{lstlisting}
 
     \vspace{10pt}
@@ -100,22 +100,22 @@ ax.plot(sol.t,sol.y[0],label='RK45')
     \vspace{80pt}
     The code is given by:
     \begin{lstlisting}[language=Python, style=mystyle]
-### ------------- ANALYTICAL SOLUTION -------------
-t_sym = symbols('t')
-y_sym = Function('y')
-ode = Eq(y_sym(t_sym).diff(t_sym), -3*y_sym(t_sym) + 9*t_sym)
-analytical_solution = dsolve(ode, y_sym(t_sym), ics={y_sym(0): y0})
+    ### ------------- ANALYTICAL SOLUTION -------------
+    t_sym = symbols('t')
+    y_sym = Function('y')
+    ode = Eq(y_sym(t_sym).diff(t_sym), -3*y_sym(t_sym) + 9*t_sym)
+    analytical_solution = dsolve(ode, y_sym(t_sym), ics={y_sym(0): y0})
 
-### ------------- BACKWARD EULER ---------
-yBEVec = np.zeros(timeSteps)  # Allocate memory
-yBEVec[0] = y0  # Set initial condition
-# Loop over time
-for t in range(timeSteps-1):
-    yBEVec[t+1] = (yBEVec[t] + 9*timeStep[t+1]*tDt) / (1 + 3*tDt)
+    ### ------------- BACKWARD EULER ---------
+    yBEVec = np.zeros(timeSteps)  # Allocate memory
+    yBEVec[0] = y0  # Set initial condition
+    # Loop over time
+    for t in range(timeSteps-1):
+        yBEVec[t+1] = (yBEVec[t] + 9*timeStep[t+1]*tDt) / (1 + 3*tDt)
 
-### ------------- RK45 SOLVER ---------
-def odefun(t, y): return -3 * y + 9 * t
-sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
+    ### ------------- RK45 SOLVER ---------
+    def odefun(t, y): return -3 * y + 9 * t
+    sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
     \end{lstlisting}
 
     The resulting plots are shown in Figure \ref{fig:other_function} and \ref{fig:other_function_zoom}.
@@ -233,60 +233,60 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
     Additionally, Figure \ref{fig:timestepsRK45} shows the dynamic time steps used by the RK45 solver.
 
     \begin{lstlisting}[language=Python, style=mystyle]
-        ...
-        ### ------------- PARAMETERS ---------
-        solvers = ['BE', 'FE', 'RK45']
-        showTimeSteps = False
-        ...
-        ### ------------- SOLVING FOR ALL SOLVERS ---------
-        for solver in solvers:
-                if solver != 'FE' and solver != 'BE':
-                    # Use scipy's solve_ivp to solve the ODE system for the built-in solver
-                    sol = solve_ivp(
-                        lambda t, v: ode_system(t, v, I, R, C, tDel, tDur, tDt, solver),
-                        [0, tStop],
-                        [0],  # Initial condition
-                        method=solver
-                    )
-                    # Extract the solution
-                    vVec_solvers[solver] = sol.y[0]
-                    timeSteps_solvers[solver] = sol.t
-                else:
-                    # Solve the ODE system for Forward Euler and Backward Euler
-                    vVec = np.zeros(timeSteps)
-                    for t in range(0, timeSteps - 1):
-                        IStim = 0
-                        if t >= int(tDel / tDt) and t < int((tDel + tDur) / tDt):
-                            IStim = I  # in nA
-
-                        if solver == 'FE':
-                            vVec[t + 1] = vVec[t] + ((-vVec[t] / R + IStim) / C) * tDt
-                        elif solver == 'BE':
-                            vVec[t + 1] = (vVec[t] + IStim * (tDt / C)) / (1 + tDt / (R * C))
-
-                    vVec_solvers[solver] = vVec
-                    timeSteps_solvers[solver] = timeStep
-        ...
-        ### ------------- PLOTTING ---------
-        for solver in solvers:
-                plot, = ax.plot(timeSteps_solvers[solver], vVec_solvers[solver], label=solver+' Nr. Timesteps='+str(timeSteps_solvers[solver].size))
-                if showTimeSteps:
-                    for t_step in timeSteps_solvers[solver]:
-                        ax.axvline(x=t_step, color=plot.get_color(), linestyle='--', linewidth=0.8)
-        ...
-        ### ------------- ODE ---------
-        def ode_system(t, v, I, R, C, tDel, tDur, tDt, solver):
-            # Stimulus current
-            IStim = 0
-            if t >= tDel and t < tDel + tDur:
-                IStim = I  # in nA
-
-            # Compute change of v
-            if solver == 'BE':
-                return (v + IStim * tDt / C) / (1 + tDt / (R * C))
+    [...]
+    ### ------------- PARAMETERS ---------
+    solvers = ['BE', 'FE', 'RK45']
+    showTimeSteps = False
+    [...]
+    ### ------------- SOLVING FOR ALL SOLVERS ---------
+    for solver in solvers:
+            if solver != 'FE' and solver != 'BE':
+                # Use scipy's solve_ivp to solve the ODE system for the built-in solver
+                sol = solve_ivp(
+                    lambda t, v: ode_system(t, v, I, R, C, tDel, tDur, tDt, solver),
+                    [0, tStop],
+                    [0],  # Initial condition
+                    method=solver
+                )
+                # Extract the solution
+                vVec_solvers[solver] = sol.y[0]
+                timeSteps_solvers[solver] = sol.t
             else:
-                return (-v / R + IStim) / C
-        ...
+                # Solve the ODE system for Forward Euler and Backward Euler
+                vVec = np.zeros(timeSteps)
+                for t in range(0, timeSteps - 1):
+                    IStim = 0
+                    if t >= int(tDel / tDt) and t < int((tDel + tDur) / tDt):
+                        IStim = I  # in nA
+
+                    if solver == 'FE':
+                        vVec[t + 1] = vVec[t] + ((-vVec[t] / R + IStim) / C) * tDt
+                    elif solver == 'BE':
+                        vVec[t + 1] = (vVec[t] + IStim * (tDt / C)) / (1 + tDt / (R * C))
+
+                vVec_solvers[solver] = vVec
+                timeSteps_solvers[solver] = timeStep
+    [...]
+    ### ------------- PLOTTING ---------
+    for solver in solvers:
+            plot, = ax.plot(timeSteps_solvers[solver], vVec_solvers[solver], label=solver+' Nr. Timesteps='+str(timeSteps_solvers[solver].size))
+            if showTimeSteps:
+                for t_step in timeSteps_solvers[solver]:
+                    ax.axvline(x=t_step, color=plot.get_color(), linestyle='--', linewidth=0.8)
+    [...]
+    ### ------------- ODE ---------
+    def ode_system(t, v, I, R, C, tDel, tDur, tDt, solver):
+        # Stimulus current
+        IStim = 0
+        if t >= tDel and t < tDel + tDur:
+            IStim = I  # in nA
+
+        # Compute change of v
+        if solver == 'BE':
+            return (v + IStim * tDt / C) / (1 + tDt / (R * C))
+        else:
+            return (-v / R + IStim) / C
+    [...]
     \end{lstlisting}
 
     \begin{figure}[h!]
@@ -307,7 +307,7 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
 
     Using the following parameters generates the resulting plot shown in Figure \ref{fig:RC_all_solvers}. It gives a comparison between all the different available solvers.
     \begin{lstlisting}[language=Python, style=mystyle]
-        solvers = ['RK45', 'RK23', 'DOP853', 'Radau', 'BDF', 'LSODA']
+    solvers = ['RK45', 'RK23', 'DOP853', 'Radau', 'BDF', 'LSODA']
     \end{lstlisting}
 
     Additionally, Figure \ref{fig:RC_all_solvers_with_timesteps} shows all the dynamic time steps of those solvers (color-coded).
@@ -426,29 +426,29 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
     The code that produced this plot it given by:
 
     \begin{lstlisting}[language=Python, style=mystyle]
-        fig, ax1 = plt.subplots()
-        ax1.grid()
-        ax1.set_xlabel('Time (ms)')
-        ax1.set_ylabel('Membrane voltage (mV)', color='tab:blue')
-        ax1.plot(timeStep, vVec, label='Membrane Voltage', color='tab:blue')
-        ax1.tick_params(axis='y', labelcolor='tab:blue')
+    fig, ax1 = plt.subplots()
+    ax1.grid()
+    ax1.set_xlabel('Time (ms)')
+    ax1.set_ylabel('Membrane voltage (mV)', color='tab:blue')
+    ax1.plot(timeStep, vVec, label='Membrane Voltage', color='tab:blue')
+    ax1.tick_params(axis='y', labelcolor='tab:blue')
 
-        ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-        ax2.set_ylabel('Current densities (uA/cm2)', color='tab:red')
+    ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+    ax2.set_ylabel('Current densities (uA/cm2)', color='tab:red')
 
-        # Plot sodium and potassium current densities with legends
-        ax2.plot(timeStep, gNa * mVec**3 * hVec * (vVec - eNa), '--', label='Sodium Current (iNa)', color='tab:red')
-        ax2.plot(timeStep, gK * nVec**4 * (vVec - eK), '-.', label='Potassium Current (iK)', color='tab:green')
+    # Plot sodium and potassium current densities with legends
+    ax2.plot(timeStep, gNa * mVec**3 * hVec * (vVec - eNa), '--', label='Sodium Current (iNa)', color='tab:red')
+    ax2.plot(timeStep, gK * nVec**4 * (vVec - eK), '-.', label='Potassium Current (iK)', color='tab:green')
 
-        ax2.tick_params(axis='y', labelcolor='tab:red')
+    ax2.tick_params(axis='y', labelcolor='tab:red')
 
-        # Add legend
-        lines, labels = ax1.get_legend_handles_labels()
-        lines2, labels2 = ax2.get_legend_handles_labels()
-        ax2.legend(lines + lines2, labels + labels2, loc='upper right')
+    # Add legend
+    lines, labels = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+    ax2.legend(lines + lines2, labels + labels2, loc='upper right')
 
-        fig.tight_layout()  # ensure the shared x-axis labels are not slightly cut off
-        plt.show()
+    fig.tight_layout()  # ensure the shared x-axis labels are not slightly cut off
+    plt.show()
     \end{lstlisting}
 
     \begin{figure}[h]
@@ -537,40 +537,40 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
     The script uses a binary search algorithm to efficiently find the threshold for different pulse durations.
 
     \begin{lstlisting}[language=Python, style=mystyle]
-        def binary_search_threshold(time_step, stim_duration, pulse_amplitude):
-            low, high = 0, 1000  # Initial search range for threshold
-            threshold = None
+    def binary_search_threshold(time_step, stim_duration, pulse_amplitude):
+        low, high = 0, 1000  # Initial search range for threshold
+        threshold = None
 
-            while high - low > 1e-6:
-                current_amplitude = (low + high) / 2
-                _, v, _, _, _ = HH_single(I=current_amplitude, tDur=stim_duration)
-                max_voltage = np.max(v)
+        while high - low > 1e-6:
+            current_amplitude = (low + high) / 2
+            _, v, _, _, _ = HH_single(I=current_amplitude, tDur=stim_duration)
+            max_voltage = np.max(v)
 
-                if max_voltage > 0:
-                    high = current_amplitude
-                    threshold = current_amplitude
-                else:
-                    low = current_amplitude
+            if max_voltage > 0:
+                high = current_amplitude
+                threshold = current_amplitude
+            else:
+                low = current_amplitude
 
-            return threshold
-        ...
+        return threshold
+    [...]
 
-        # Parameters
-        pulse_durations = np.logspace(-2, 2, 20)  # Pulse durations from 0.01 to 100 ms in 20 logarithmic steps
-        stim_duration_long_pulse = 100  # Duration of the long pulse for rheobase calculation
+    # Parameters
+    pulse_durations = np.logspace(-2, 2, 20)  # Pulse durations from 0.01 to 100 ms in 20 logarithmic steps
+    stim_duration_long_pulse = 100  # Duration of the long pulse for rheobase calculation
 
-        # Compute SD curve
-        thresholds = []
+    # Compute SD curve
+    thresholds = []
 
-        for duration in pulse_durations:
-            threshold = binary_search_threshold(0.025, duration, 15)
-            thresholds.append(threshold)
-        ...
+    for duration in pulse_durations:
+        threshold = binary_search_threshold(0.025, duration, 15)
+        thresholds.append(threshold)
+    [...]
 
-        rheobase = binary_search_threshold(0.025, stim_duration_long_pulse, 15)
-        double_rheobase = 2 * rheobase
-        index_double_rheobase = np.argmin(np.abs(np.array(thresholds) - double_rheobase))
-        chronaxie = pulse_durations[index_double_rheobase]
+    rheobase = binary_search_threshold(0.025, stim_duration_long_pulse, 15)
+    double_rheobase = 2 * rheobase
+    index_double_rheobase = np.argmin(np.abs(np.array(thresholds) - double_rheobase))
+    chronaxie = pulse_durations[index_double_rheobase]
     \end{lstlisting}
 
     \begin{figure}[h]
@@ -594,36 +594,36 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
     For each amplitude, the simulation is run 50 times, and a logistic curve is fitted to the simulated data.
 
     \begin{lstlisting}[language=Python, style=mystyle]
-        def logistic_function(x, L, k, x0):
-            return L / (1 + np.exp(-k * (x - x0)))
+    def logistic_function(x, L, k, x0):
+        return L / (1 + np.exp(-k * (x - x0)))
 
-        # Parameters
-        amplitudes = np.arange(0, 30, 1)  # Stimulus amplitudes from 0 to 30 μA/cm² in 1 μA/cm² steps
-        num_simulations = 50
-        tDur = 0.5
+    # Parameters
+    amplitudes = np.arange(0, 30, 1)  # Stimulus amplitudes from 0 to 30 μA/cm² in 1 μA/cm² steps
+    num_simulations = 50
+    tDur = 0.5
 
-        # Function to run simulation and compute spiking probability
-        def run_simulation_and_compute_probability(amplitude):
-            spiking_count = 0
+    # Function to run simulation and compute spiking probability
+    def run_simulation_and_compute_probability(amplitude):
+        spiking_count = 0
 
-            for _ in range(num_simulations):
-                _, v, _, _, _ = HH_single(I=amplitude, tDur=tDur)
-                if np.max(v) > 0:
-                    spiking_count += 1
+        for _ in range(num_simulations):
+            _, v, _, _, _ = HH_single(I=amplitude, tDur=tDur)
+            if np.max(v) > 0:
+                spiking_count += 1
 
-            spiking_probability = spiking_count / num_simulations * 100
-            return spiking_probability
+        spiking_probability = spiking_count / num_simulations * 100
+        return spiking_probability
 
-        # Compute spiking probabilities
-        spiking_probabilities = [run_simulation_and_compute_probability(amplitude) for amplitude in amplitudes]
+    # Compute spiking probabilities
+    spiking_probabilities = [run_simulation_and_compute_probability(amplitude) for amplitude in amplitudes]
 
-        # Fit a logistic curve to the spiking probabilities
-        params, _ = curve_fit(logistic_function, amplitudes, spiking_probabilities, p0=[100, 1, 15])
+    # Fit a logistic curve to the spiking probabilities
+    params, _ = curve_fit(logistic_function, amplitudes, spiking_probabilities, p0=[100, 1, 15])
     \end{lstlisting}
 
     Additionally, a random factor is added to the total ionic current:
     \begin{lstlisting}[language=Python, style=mystyle]
-        iIon = iNa+iK+iL + 20 * np.random.randn() # in uA/cm2
+    iIon = iNa+iK+iL + 20 * np.random.randn() # in uA/cm2
     \end{lstlisting}
 
     \begin{figure}[h]
@@ -640,6 +640,371 @@ sol = integrate.solve_ivp(odefun, [0, tStop], [y0], method='RK45')
         \item Parameter \(k\): 0.66
         \item Parameter \(x_0\): 12.94
     \end{itemize}
+
+
+    \section{Multi-Compartment Hodgkin-Huxley Model}
+
+    \subsection{}
+    The membrane voltage was for a stimulation current of \( I = -0.5 \muA \) plotted over the location of the fiber at a specific timestamp, which was chosen to be 0.1 ms after the stimulus onset.
+    The resultant plot is shown in Figure \ref{fig:membrane_voltage}.
+
+    \vspace{10pt}
+    The code that produces the plot is given by:
+
+    \begin{lstlisting}[language=Python, style=mystyle]
+    specific_timestamp = int((tDel + 0.1) / tDt)
+    fig, ax = plt.subplots()
+    location = np.arange(-lComp * (nComp // 2), lComp * (nComp // 2) + 1, lComp)
+    ax.plot(location, vMat[:, specific_timestamp], 'b')
+    ax.set_xlabel('Location along fiber (μm)')
+    ax.set_ylabel('Membrane Voltage (mV)')
+    ax.set_title('Membrane Voltage Distribution at t = {:.2f} ms'.format(specific_timestamp * tDt))
+    plt.show()
+    \end{lstlisting}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{membrane_voltage}
+        \caption{Membrane voltage distribution along the fiber at a specific time point after the onset of the cathodic stimulus.}
+        \label{fig:membrane_voltage}
+    \end{figure}
+
+    \vspace{10pt}
+    When a cathodic stimulus is applied, the area immediately beneath the electrode becomes hyperpolarized due to the influx of negative charges.
+    This creates a local potential difference between the stimulated area and adjacent regions.
+    Adjacent regions experience a relative depolarization due to this, as positive charges flow towards the hyperpolarized area to balance the potential.
+
+    \subsection{}
+    The activating function is calculated as the second spatial derivative of the extracellular potential and plotted using the following code:
+
+    \begin{lstlisting}[language=Python, style=mystyle]
+    fig, ax = plt.subplots()
+    location = np.arange(-lComp * (nComp // 2), lComp * (nComp // 2) + 1, lComp)
+    ax.plot(location, np.gradient(np.gradient(potentials)), 'b')
+    plt.title('Activating Function for Cathodic Pulse')
+    plt.xlabel('Location along fiber (μm)')
+    plt.ylabel('Activating Function (mV/ms)')
+    plt.show()
+    \end{lstlisting}
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{activating_function_cathodic.png}
+            \caption{Activating functions for a cathodic pulse.}
+            \label{fig:activating_function_cathodic}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{activating_function_anodic.png}
+            \caption{Activating functions for an anodic pulse}
+            \label{fig:activating_function_anodic}
+        \end{minipage}
+    \end{figure}
+
+    As can be seen in Figure~\ref{fig:activating_function_cathodic} and~\ref{fig:activating_function_anodic}, the activation function shows the regions that have high probability of hyperpolarization or depolarization in a given electric field.
+    The cathodic and anodic activation functions are the inverse of each other, which is in alignment with the fact, that a positive stimulus can induce a hyperpolarization at the exact position where a negative stimulus can induce a depolarization.
+
+    \subsection{}
+    Using the previous parameters of our model and altering the Stimulus amplitude, we find, that cathodic threshold to initiate an action potential from a point source is \(I = -4\mu A\) and for a disk with \(d = 50\mu m\) the threshold is \(I = -2.5\mu A\).
+    The action potential is initiated at the center, directly underneath the electrode and propagates outwards to the left and right from there.
+    This can be seen in Figure \ref{fig:threshold_point} and \ref{fig:threshold_disk}.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{threshold_point}
+            \caption{Propagating action potential initiated from a point electrode}
+            \label{fig:threshold_point}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{threshold_disk}
+            \caption{Propagating action potential initiated from a disk electrode}
+            \label{fig:threshold_disk}
+        \end{minipage}
+    \end{figure}
+
+    \subsection{}
+    When the intracellular resistivity increases, it becomes harder for the ionic currents to flow through the cytoplasm within the axon.
+    This increased resistance slows down the rate at which the depolarization spreads down the axon.
+    Decreasing the intracellular resistivity on the other hand increases the conduction velocity of an action potential.
+
+    \subsection{}
+    Despite initial hyperpolarization, it is still possible to trigger an action potential with an anodic pulse at higher amplitudes.
+    This phenomenon is known as anodal break excitation.
+    After the end of the anodic pulse, there can be a rebound effect.
+    The membrane potential, having been hyperpolarized, returns to its resting state.
+    This rebound can overshoot, leading to depolarization sufficient to reach the threshold for an action potential.
+    For anodic stimulation, the action potential is typically not initiated directly under the electrode (where the hyperpolarization is greatest) but rather at a location adjacent to this area.
+
+    \subsection{}
+    The following code was used to create the spiking activity plot that can be seen in Figure \ref{fig:spiking_activity}:
+
+    \begin{lstlisting}[language=Python, style=mystyle]
+    def detect_spiking(vMat):
+        threshold = -20  # Threshold voltage for spiking in mV
+        return 1 if np.any(vMat > threshold) else 0
+
+    def HH_multi(cellX):
+
+        [...]
+
+        I = -5
+        cellY = 25
+
+        [...]
+
+        return detect_spiking(vMat)
+
+    if __name__ == '__main__':
+        cellX_values = np.arange(-3000, 3001, 100)  # cellX from -3000 to 3000 in steps of 100 µm
+        spiking_activity = []
+
+        for cellX in cellX_values:
+            spiking = HH_multi(cellX)
+            spiking_activity.append(spiking)
+
+        # Plotting spiking activity vs. cellX coordinate
+        plt.plot(cellX_values, spiking_activity, 'o-')
+        plt.xlabel('Cell X Coordinate (µm)')
+        plt.ylabel('Spiking Activity (0=No, 1=Yes)')
+        plt.title('Spiking Activity vs. Cell X Coordinate')
+        plt.grid(True)
+        plt.show()
+    \end{lstlisting}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{spiking_activity}
+        \caption{Spiking activity for a shifting electrode along the fiber}
+        \label{fig:spiking_activity}
+    \end{figure}
+
+
+    \section{Finite Element Simulation}
+
+    \subsection{}
+
+    Figures \ref{fig:FE_structure}-\ref{fig:FE_efield_1} show the configuration built in \texttt{Agros2D} alongside the calculated mesh and e-Field.
+    At first glance this e-Field seems correct.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_structure}
+            \caption{Electrode and Extracellular Configuration}
+            \label{fig:FE_structure}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_mesh_1}
+            \caption{Generated Mesh for Finite Element Simulation}
+            \label{fig:FE_mesh_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_1}
+            \caption{Calculated E-Field for the given Configuration}
+            \label{fig:FE_efield_1}
+        \end{minipage}
+    \end{figure}
+
+    Looking at Figure \ref{fig:FE_efield_at_electrode_1} we see though, that especially for sharp changes in the electrical potential there are issues with the accuracy of this result.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_along_fiber_1}
+            \caption{ along the fiber in the center of the chamber}
+            \label{fig:FE_efield_along_fiber_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.49\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_at_electrode_1}
+            \caption{Electrical potential near the upper electrode}
+            \label{fig:FE_efield_at_electrode_1}
+        \end{minipage}
+    \end{figure}
+
+    \subsection{}
+
+    Next we increase the refinement iterations of the mesh to 2 and 3.
+    The results can be seen in Figure \ref{fig:FE_mesh_1_1}-\ref{fig:FE_efield_at_electrode_3}.
+    As we can see, the mesh gets more dense for each added iteration, also the results for the electrical potential are already a lot better for two iterations.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_mesh_1}
+            \caption{Generated Mesh for 1 refinement iteration}
+            \label{fig:FE_mesh_1_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_mesh_2}
+            \caption{Generated Mesh for 2 refinement iterations}
+            \label{fig:FE_mesh_2}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_mesh_3}
+            \caption{Generated Mesh for 2 refinement iterations}
+            \label{fig:FE_mesh_3}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_along_fiber_1}
+            \caption{Electrical potential along the fiber for 1 refinement iteration}
+            \label{fig:FE_efield_along_fiber_1_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_along_fiber_2}
+            \caption{Electrical potential along the fiber for 2 refinement iterations}
+            \label{fig:FE_efield_along_fiber_2}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_along_fiber_3}
+            \caption{Electrical potential along the fiber for 3 refinement iterations}
+            \label{fig:FE_efield_along_fiber_3}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_at_electrode_1}
+            \caption{Electrical potential near the upper electrode for 1 refinement iteration}
+            \label{fig:FE_efield_at_electrode_1_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_at_electrode_2}
+            \caption{Electrical potential near the upper electrode for 2 refinement iterations}
+            \label{fig:FE_efield_at_electrode_2}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_at_electrode_3}
+            \caption{Electrical potential near the upper electrode for 3 refinement iterations}
+            \label{fig:FE_efield_at_electrode_3}
+        \end{minipage}
+    \end{figure}
+
+    \subsection{}
+
+    The following results show the anodic and cathodic spiking threshold for the electrode configuration above
+
+    \begin{enumerate}
+        \item \textbf{Direct Scaling}: Potentials imported in \texttt{HH\_multi.py/m} were scaled by the stimulus amplitude $I$. The calculated thresholds for this method were as follows:
+        \begin{align*}
+            \text{Cathodic Threshold} &: -50 \\
+            \text{Anodic Threshold} &: 180
+        \end{align*}
+
+        \item \textbf{Electrode Boundary Condition Modification}: The stimulus current $I$ was set to $1\mu A$, and the applied current density was directly modified in \texttt{Agros2D} by altering the electrode boundary condition. The calculated current densities and corresponding thresholds were as follows:
+        \begin{align*}
+            \text{Cathodic Threshold} &: -50 \text{ (Current Density} = -6369.43\mu A/mm^2) \\
+            \text{Anodic Threshold} &: 180 \text{ (Current Density} = 22929.94\mu A/mm^2)
+        \end{align*}
+    \end{enumerate}
+
+    As we can see both methods yield the exact same results, which was to be expected since the scaling of the current is of linear nature.
+    This outcome is expected since the action potentials scale linearly with stimulus amplitude.
+
+    \subsection{}
+
+    The following shows the spiking threshold for different electrode configurations depicted in Figure \ref{fig:FE_efield_1_1}-\ref{fig:FE_efield_vertical}:
+
+    \begin{enumerate}
+        \item \textbf{Four electrodes}:
+        \begin{align*}
+            \text{Cathodic Threshold} &: -50 \\
+            \text{Anodic Threshold} &: 180
+        \end{align*}
+        \item \textbf{Horizontally aligned electrodes}:
+        \begin{align*}
+            \text{Cathodic Threshold} &: -40 \\
+            \text{Anodic Threshold} &: 120
+        \end{align*}
+
+        \item \textbf{Vertically aligned electrodes}:
+        \begin{align*}
+            \text{Cathodic Threshold} &: -200 \\
+            \text{Anodic Threshold} &: 100
+        \end{align*}
+    \end{enumerate}
+
+    Figures \ref{fig:FE_all_anodic_loc}-\ref{fig:FE_vertical_cathodic_loc} depict the location where the action potential initiates for each given configuration and for an anodic and a cathodic impulse.
+    Those result seem correct, considering the proximity of the electrodes as well as, the fact, that anodic impulses tend to induce action potentials further away from the electrode, whereas cathodic impulses stimulate directly next to them.
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_1}
+            \caption{Calculated E-Field for four electrodes}
+            \label{fig:FE_efield_1_1}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_horizontal}
+            \caption{Calculated E-Field for two horizontally aligned electrodes}
+            \label{fig:FE_efield_horizontal}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_efield_vertical}
+            \caption{Calculated E-Field for two vertically aligned electrodes}
+            \label{fig:FE_efield_vertical}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_all_anodic_loc}
+            \caption{Anodic action potential initialization location for four electrodes}
+            \label{fig:FE_all_anodic_loc}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_horizontal_anodic_loc}
+            \caption{Anodic action potential initialization location for two horizontally aligned electrodes}
+            \label{fig:FE_horizontal_anodic_loc}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_vertical_anodic_loc}
+            \caption{Anodic action potential initialization location for two vertically aligned electrodes}
+            \label{fig:FE_vertical_anodic_loc}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_all_cathodic_loc}
+            \caption{Cathodic action potential initialization location for four electrodes}
+            \label{fig:FE_all_cathodic_loc}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_horizontal_cathodic_loc}
+            \caption{Cathodic action potential initialization location for two horizontally aligned electrodes}
+            \label{fig:FE_horizontal_cathodic_loc}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\textwidth}
+            \includegraphics[width=\textwidth]{FE_vertical_cathodic_loc}
+            \caption{Cathodic action potential initialization location for two vertically aligned electrodes}
+            \label{fig:FE_vertical_cathodic_loc}
+        \end{minipage}
+    \end{figure}
 
 
 \end{document}

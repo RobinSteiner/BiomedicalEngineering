@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "python",
+            "name": "Python configuration",
+            "file": "Ex 3/HH_multi_task3.py",
+            "arguments": [],
+        },
+        
+    ]
+}
