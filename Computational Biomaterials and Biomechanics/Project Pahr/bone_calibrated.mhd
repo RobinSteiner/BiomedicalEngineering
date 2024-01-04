@@ -1,0 +1,13 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+TransformMatrix = 1 0 0 0 1 0 0 0 1 
+Offset = 0 0 0 
+CenterOfRotation = 0 0 0 
+AnatomicalOrientation = LPS 
+ElementSpacing = 0.996093 0.996093 1
+DimSize = 106 70 164
+ElementType = MET_FLOAT
+ElementDataFile = bone_calibrated.raw

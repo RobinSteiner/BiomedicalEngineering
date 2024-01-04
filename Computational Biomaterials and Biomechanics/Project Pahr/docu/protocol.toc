@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Methods}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Data Preparation}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Calibration}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Resolution and Scaling}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Masking}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Embedding}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Finite Element Analysis}{12}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Results}{12}{section.3}%
+\contentsline {section}{\numberline {4}Discussion}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Displacement Field}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}von Mises Stress Distribution}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Spring Stiffness}{16}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusion}{16}{section.5}%
+\contentsline {section}{\numberline {6}References}{17}{section.6}%

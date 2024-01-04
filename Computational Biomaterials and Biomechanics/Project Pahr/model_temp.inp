@@ -1,0 +1,48 @@
+*********************************************************
+** File   : model_temp.inp 
+** Author : by medtool 
+** Date   : 2024-01-02 22:18:52 
+*********************************************************
+*HEADING
+Input Deck $filename
+** Nodal data extracted from image
+*USER NODE
+** Element (C3D8) + Elset (SetName) extracted from image
+*USER ELEMENT
+**
+** Node Sets
+*USER NSET, type=face**
+** Material Property Power Law 1
+*USER PROPERTY, range=1:250
+*SOLID SECTION, ELSET=SetName, MATERIAL=CardName
+1.
+*MATERIAL,NAME=CardName
+*ELASTIC
+5000.000000*(GrayValue/250.0)**2.500000, 0.300000
+*USER END PROPERTY
+** Material Property Elastic 1
+*USER PROPERTY, range=255:255
+*SOLID SECTION, ELSET=SetName, MATERIAL=CardName
+1.
+*MATERIAL,NAME=CardName
+*ELASTIC
+2200.000000, 0.300000
+*USER END PROPERTY
+**
+*********************************************************
+*STEP
+*STATIC
+** Nodal displacements 
+*BOUNDARY
+ALL_NODE_B, 1, 3, 0.000000
+ALL_NODE_T, 3, 3, -0.300000
+** Nodal Output FRD 
+*NODE FILE 
+U, RF
+** Element Output FRD 
+*EL FILE 
+S, E, ENER
+** Nodal Output DAT 
+*NODE Print, NSET=ALL_NODE_T
+RF, U
+*END STEP

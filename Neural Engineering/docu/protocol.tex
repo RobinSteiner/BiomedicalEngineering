@@ -39,7 +39,7 @@
 \begin{document}
 
     \begin{center}
-        \textbf{\Large Computational Biomaterials and Biomechanics - Exercise} \\
+        \textbf{\Large Computational Methods in Neural Engineering - Exercise} \\
         \vspace{0.2cm}
         Robin Steiner (11778873)\\
         \vspace{0.2cm}
@@ -85,7 +85,8 @@
     \end{figure}
 
     \subsubsection{}
-    Next the following ODE is solved using RK45 and the backward Euler method. Again those results are compared to the analytical solution which is also found using Python.
+    Next the following ODE is solved using RK45 and the backward Euler method.
+    Again those results are compared to the analytical solution which is also found using Python.
 
     \[ y'(t) = -3y(t) + 9t, \quad y(0) = 9 \]
 
@@ -177,7 +178,8 @@
         \end{minipage}
     \end{figure}
 
-    The time constant ($\tau$) of an RC circuit is a measure of how quickly the circuit responds to changes. It is given by the product of resistance ($R$) and capacitance ($C$), i.e., $\tau = R * C$.
+    The time constant ($\tau$) of an RC circuit is a measure of how quickly the circuit responds to changes.
+    It is given by the product of resistance ($R$) and capacitance ($C$), i.e., $\tau = R * C$.
 
     More specifically it is the time it takes to charge the capacitor 63.2\% of its final voltage in response to a step change in voltage.
 
@@ -191,7 +193,8 @@
 
     The correctness of this can be easily checked by looking at the plots from Figure \ref{fig:R10C0.5} - \ref{fig:R30C0.9} (where $I_{Stim} = 1$)
 
-    Next we calculate how long it takes until the capacitor is charged up to 99\% using. The voltage across a charging capacitor in an RC circuit is given by:
+    Next we calculate how long it takes until the capacitor is charged up to 99\% using.
+    The voltage across a charging capacitor in an RC circuit is given by:
 
     \[
         v(t) = V_0 \left(1 - e^{-\frac{t}{R \cdot C}}\right)
@@ -218,7 +221,7 @@
         t = -R \cdot C \cdot \ln(0.01) \approx 4.605 \cdot R \cdot C
     \]
 
-    Therefore we can use factor 5 to approximate the time it takes for a capacitor to be fully charged up:
+    Therefore, we can use factor 5 to approximate the time it takes for a capacitor to be fully charged up:
     \[
         t \approx 5 \cdot R \cdot C
     \]
@@ -226,7 +229,8 @@
     \clearpage
 
     \subsubsection{}
-    The following code shows the implementation of the RK45 solver with the provided code as a base. The result is plotted together with the results of a forward and backward Euler solver and can be seen in Figure \ref{fig:RC_RK45_base}.
+    The following code shows the implementation of the RK45 solver with the provided code as a base.
+    The result is plotted together with the results of a forward and backward Euler solver and can be seen in Figure \ref{fig:RC_RK45_base}.
     The time step for the forward and backward Euler solver was set to 5ms to illustrate the differences.
 
     \vspace{10pt}
@@ -305,7 +309,8 @@
 
     \subsubsection{}
 
-    Using the following parameters generates the resulting plot shown in Figure \ref{fig:RC_all_solvers}. It gives a comparison between all the different available solvers.
+    Using the following parameters generates the resulting plot shown in Figure \ref{fig:RC_all_solvers}.
+    It gives a comparison between all the different available solvers.
     \begin{lstlisting}[language=Python, style=mystyle]
     solvers = ['RK45', 'RK23', 'DOP853', 'Radau', 'BDF', 'LSODA']
     \end{lstlisting}
@@ -314,8 +319,8 @@
     The number of steps are shown in the legend.
 
     \vspace{10pt}
-    As we can see many solvers perform better in this case than the RK45 solver. The issue with the solution of RK45 is, that the dip happens too early (before the dip of the input signal).
-
+    As we can see many solvers perform better in this case than the RK45 solver.
+    The issue with the solution of RK45 is, that the dip happens too early (before the dip of the input signal).
 
     \begin{figure}[h!]
         \centering
@@ -331,10 +336,13 @@
     \end{figure}
 
     \vspace{10pt}
-    Figure \ref{fig:RK45_vs_RK23} shows a comparison between RK45 and RK23. In this specific case the RK23 solver actually performs better than the RK45 solver, since its closer to the real solution. It also uses more time steps though.
+    Figure \ref{fig:RK45_vs_RK23} shows a comparison between RK45 and RK23.
+    In this specific case the RK23 solver actually performs better than the RK45 solver, since its closer to the real solution. It also uses more time steps though.
 
     \vspace{10pt}
-    A second example of a better-performing solver is the Radau solver shown in Figure \ref{fig:RK45_vs_Radau}. It is intended to be used with stiff ODEs which our ODE can be classified as, at least to a degree. Radau however also uses almost three times the time steps compared to RK45.
+    A second example of a better-performing solver is the Radau solver shown in Figure \ref{fig:RK45_vs_Radau}.
+    It is intended to be used with stiff ODEs which our ODE can be classified as, at least to a degree.
+    Radau however also uses almost three times the time steps compared to RK45.
     \begin{figure}[h!]
         \centering
         \includegraphics[width=0.7\textwidth]{RK45_vs_RK23.png}
@@ -351,12 +359,14 @@
     \clearpage
 
     \subsubsection{}
-    We can also try to 'tune' the RK45 solver in order to get better results. For this we can for example use the relative and absolute tolerances ($r_{tol}$ and $a_{tol}$).
+    We can also try to 'tune' the RK45 solver in order to get better results.
+    For this we can for example use the relative and absolute tolerances ($r_{tol}$ and $a_{tol}$).
 
     Figure \ref{fig:timestepsRK45-2} - \ref{fig:RK45_tuned} show a comparison between the results of the untuned and the tuned version of the RK45 solver with $r_{tol} = 5 \cdot 10^{-5}$ and $a_{tol} = 5 \cdot 10^{-7}$
 
     \vspace{10pt}
-    As we can see, we can eliminate the early dip using those parameter values while still keeping a low amount of time steps. The lower we choose those parameter values the more time steps we will have and the more accurate are result will become.
+    As we can see, we can eliminate the early dip using those parameter values while still keeping a low amount of time steps.
+    The lower we choose those parameter values the more time steps we will have and the more accurate are result will become.
 
     \begin{figure}[htbp]
         \centering
@@ -901,7 +911,7 @@
     The following results show the anodic and cathodic spiking threshold for the electrode configuration above
 
     \begin{enumerate}
-        \item \textbf{Direct Scaling}: Potentials imported in \texttt{HH\_multi.py/m} were scaled by the stimulus amplitude $I$. The calculated thresholds for this method were as follows:
+        \item \textbf{Direct Scaling}: Potentials imported in \texttt{HH\_multi.py} were scaled by the stimulus amplitude $I$. The calculated thresholds for this method were as follows:
         \begin{align*}
             \text{Cathodic Threshold} &: -50 \\
             \text{Anodic Threshold} &: 180

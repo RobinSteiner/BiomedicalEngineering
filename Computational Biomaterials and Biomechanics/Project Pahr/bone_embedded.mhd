@@ -1,0 +1,13 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+TransformMatrix = 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 
+Offset = 0.0 0.0 0.0 
+CenterOfRotation = 0.0 0.0 0.0 
+AnatomicalOrientation = LPS 
+ElementSpacing = 2.98828 2.98828 3
+DimSize = 35 23 54
+ElementType = MET_FLOAT
+ElementDataFile = bone_embedded.raw

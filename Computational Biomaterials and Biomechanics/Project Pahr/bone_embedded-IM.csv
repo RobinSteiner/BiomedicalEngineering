@@ -1,0 +1,2 @@
+$VOI_ElementDataFile;$VOI_ElementDataFilePath;$VOI_ElementType;$VOI_DimSize_x;$VOI_DimSize_y;$VOI_DimSize_z;$VOI_ElementSpacing_x;$VOI_ElementSpacing_y;$VOI_ElementSpacing_z;$VOI_Size_x;$VOI_Size_y;$VOI_Size_z;$VOI_Offset_x;$VOI_Offset_y;$VOI_Offset_z;$minVal;$maxVal;$voxSum;$graySum;$xsVox;$ysVox;$zsVox;$Date;$Time;$MID_Pos_x;$MID_Pos_y;$MID_Pos_z;
+bone_embedded.mhd;na;None;35;23;54;2.98828;2.98828;3;104.59;68.7304;162;0;0;0;0;255;43470;666333;na;na;na;29 Dec 2023;09:24:37;17;11;27;
