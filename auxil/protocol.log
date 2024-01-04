@@ -1,0 +1,1075 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2023.12.3)  3 JAN 2024 13:31
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**./protocol.tex
+(protocol.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen149
+\captionmargin=\dimen150
+\caption@leftmargin=\dimen151
+\caption@rightmargin=\dimen152
+\caption@width=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count196
+\c@continuedfloat=\count197
+)
+\c@subfigure=\count198
+\c@subtable=\count199
+) (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count266
+\lst@gtempboxa=\box51
+\lst@token=\toks18
+\lst@length=\count267
+\lst@currlwidth=\dimen157
+\lst@column=\count268
+\lst@pos=\count269
+\lst@lostspace=\dimen158
+\lst@width=\dimen159
+\lst@newlines=\count270
+\lst@lineno=\count271
+\lst@maxwidth=\dimen160
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count272
+\lst@skipnumbers=\count273
+\lst@framebox=\box52
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex-dev/graphics\mathcolor.
+ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen161
+))
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen162
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count274
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count275
+\leftroot@=\count276
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count277
+\DOTSCASE@=\count278
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen163
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count279
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count280
+\dotsspace@=\muskip16
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
+\tag@help=\toks20
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
+\andhelp@=\toks21
+\eqnshift@=\dimen164
+\alignsep@=\dimen165
+\tagshift@=\dimen166
+\tagwidth@=\dimen167
+\totwidth@=\dimen168
+\lineht@=\dimen169
+\@envbody=\toks22
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count286
+\l__pdf_internal_box=\box55
+) (protocol.aux)
+\openout1 = `protocol.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen170
+\scratchbox=\box56
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen171
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks25
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count293
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 67.
+
+(C:\Users\Robin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+<figures//RK45.png, id=1, 441.14813pt x 341.77687pt>
+File: figures//RK45.png Graphic file (type png)
+<use figures//RK45.png>
+Package pdftex.def Info: figures//RK45.png  used on input line 82.
+(pdftex.def)             Requested size: 301.00192pt x 233.20831pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1{C:/Users/Robin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+]
+<figures//other_function.png, id=17, 456.20438pt x 329.73187pt>
+File: figures//other_function.png Graphic file (type png)
+<use figures//other_function.png>
+Package pdftex.def Info: figures//other_function.png  used on input line 126.
+(pdftex.def)             Requested size: 301.00192pt x 217.56332pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures//other_function_zoom.png, id=18, 447.92343pt x 330.48468pt>
+File: figures//other_function_zoom.png Graphic file (type png)
+<use figures//other_function_zoom.png>
+Package pdftex.def Info: figures//other_function_zoom.png  used on input line 1
+33.
+(pdftex.def)             Requested size: 301.00192pt x 222.08923pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./figures//RK45.png>]
+
+LaTeX Warning: Text page 3 contains only floats.
+
+[3 <./figures//other_function.png> <./figures//other_function_zoom.png>]
+<figures//R10C0.5.png, id=28, 461.47406pt x 328.97906pt>
+File: figures//R10C0.5.png Graphic file (type png)
+<use figures//R10C0.5.png>
+Package pdftex.def Info: figures//R10C0.5.png  used on input line 151.
+(pdftex.def)             Requested size: 129.00269pt x 91.9629pt.
+<figures//R30C0.5.png, id=29, 452.4403pt x 340.27126pt>
+File: figures//R30C0.5.png Graphic file (type png)
+<use figures//R30C0.5.png>
+Package pdftex.def Info: figures//R30C0.5.png  used on input line 157.
+(pdftex.def)             Requested size: 129.00269pt x 97.01984pt.
+<figures//R50C0.5.png, id=30, 453.19313pt x 328.22626pt>
+File: figures//R50C0.5.png Graphic file (type png)
+<use figures//R50C0.5.png>
+Package pdftex.def Info: figures//R50C0.5.png  used on input line 162.
+(pdftex.def)             Requested size: 129.00269pt x 93.43025pt.
+<figures//R30C0.1.png, id=31, 453.94594pt x 328.97906pt>
+File: figures//R30C0.1.png Graphic file (type png)
+<use figures//R30C0.1.png>
+Package pdftex.def Info: figures//R30C0.1.png  used on input line 167.
+(pdftex.def)             Requested size: 129.00269pt x 93.48894pt.
+<figures//R30C0.9.png, id=32, 461.47406pt x 335.75438pt>
+File: figures//R30C0.9.png Graphic file (type png)
+<use figures//R30C0.9.png>
+Package pdftex.def Info: figures//R30C0.9.png  used on input line 175.
+(pdftex.def)             Requested size: 129.00269pt x 93.85689pt.
+
+[4
+
+ <./figures//R10C0.5.png> <./figures//R30C0.5.png> <./figures//R50C0.5.png> <./
+figures//R30C0.1.png> <./figures//R30C0.9.png>] [5] [6
+
+]
+<figures//RC_RK45_base.png, id=51, 452.4403pt x 334.24875pt>
+File: figures//RC_RK45_base.png Graphic file (type png)
+<use figures//RC_RK45_base.png>
+Package pdftex.def Info: figures//RC_RK45_base.png  used on input line 298.
+(pdftex.def)             Requested size: 301.00192pt x 222.36952pt.
+<figures//timestepsRK45.png, id=52, 447.17062pt x 335.00156pt>
+File: figures//timestepsRK45.png Graphic file (type png)
+<use figures//timestepsRK45.png>
+Package pdftex.def Info: figures//timestepsRK45.png  used on input line 304.
+(pdftex.def)             Requested size: 301.00192pt x 225.50288pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./figures//RC_RK45_base.png>] [8 <./figures//timestepsRK45.png>]
+<figures//RC_all_solvers.png, id=62, 447.17062pt x 329.73187pt>
+File: figures//RC_all_solvers.png Graphic file (type png)
+<use figures//RC_all_solvers.png>
+Package pdftex.def Info: figures//RC_all_solvers.png  used on input line 327.
+(pdftex.def)             Requested size: 301.00192pt x 221.95564pt.
+<figures//RC_all_solvers_with_timesteps.png, id=63, 448.67625pt x 329.73187pt>
+File: figures//RC_all_solvers_with_timesteps.png Graphic file (type png)
+<use figures//RC_all_solvers_with_timesteps.png>
+Package pdftex.def Info: figures//RC_all_solvers_with_timesteps.png  used on in
+put line 333.
+(pdftex.def)             Requested size: 301.00192pt x 221.21101pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures//RK45_vs_RK23.png, id=64, 446.41782pt x 332.74312pt>
+File: figures//RK45_vs_RK23.png Graphic file (type png)
+<use figures//RK45_vs_RK23.png>
+Package pdftex.def Info: figures//RK45_vs_RK23.png  used on input line 348.
+(pdftex.def)             Requested size: 301.00192pt x 224.35835pt.
+<figures//RK45_vs_Radau.png, id=65, 447.17062pt x 332.74312pt>
+File: figures//RK45_vs_Radau.png Graphic file (type png)
+<use figures//RK45_vs_Radau.png>
+Package pdftex.def Info: figures//RK45_vs_Radau.png  used on input line 354.
+(pdftex.def)             Requested size: 301.00192pt x 223.98264pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9
+
+ <./figures//RC_all_solvers.png>]
+
+LaTeX Warning: Text page 10 contains only floats.
+
+[10 <./figures//RC_all_solvers_with_timesteps.png> <./figures//RK45_vs_RK23.png
+>] [11 <./figures//RK45_vs_Radau.png>]
+File: figures//timestepsRK45.png Graphic file (type png)
+<use figures//timestepsRK45.png>
+Package pdftex.def Info: figures//timestepsRK45.png  used on input line 374.
+(pdftex.def)             Requested size: 210.70462pt x 157.85457pt.
+<figures//RK45_tuned.png, id=79, 447.17062pt x 333.49594pt>
+File: figures//RK45_tuned.png Graphic file (type png)
+<use figures//RK45_tuned.png>
+Package pdftex.def Info: figures//RK45_tuned.png  used on input line 380.
+(pdftex.def)             Requested size: 210.70462pt x 157.14511pt.
+<figures//threshold(13.45).png, id=80, 642.4pt x 481.8pt>
+File: figures//threshold(13.45).png Graphic file (type png)
+<use figures//threshold(13.45).png>
+Package pdftex.def Info: figures//threshold(13.45).png  used on input line 397.
+
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//double_threshold(26.9).png, id=81, 642.4pt x 481.8pt>
+File: figures//double_threshold(26.9).png Graphic file (type png)
+<use figures//double_threshold(26.9).png>
+Package pdftex.def Info: figures//double_threshold(26.9).png  used on input lin
+e 403.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//ac_backward_euler.png, id=82, 642.4pt x 481.8pt>
+File: figures//ac_backward_euler.png Graphic file (type png)
+<use figures//ac_backward_euler.png>
+Package pdftex.def Info: figures//ac_backward_euler.png  used on input line 421
+.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//ac_forward_euler.png, id=83, 642.4pt x 481.8pt>
+File: figures//ac_forward_euler.png Graphic file (type png)
+<use figures//ac_forward_euler.png>
+Package pdftex.def Info: figures//ac_forward_euler.png  used on input line 427.
+
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+ [12
+
+ <./figures//RK45_tuned.png>]
+[13 <./figures//threshold(13.45).png (PNG copy)> <./figures//double_threshold(2
+6.9).png (PNG copy)> <./figures//ac_backward_euler.png (PNG copy)> <./figures//
+ac_forward_euler.png (PNG copy)>]
+<figures//channel_activation.png, id=92, 642.4pt x 481.8pt>
+File: figures//channel_activation.png Graphic file (type png)
+<use figures//channel_activation.png>
+Package pdftex.def Info: figures//channel_activation.png  used on input line 46
+6.
+(pdftex.def)             Requested size: 301.00192pt x 225.75496pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures//ac_at_2degree.png, id=93, 642.4pt x 481.8pt>
+File: figures//ac_at_2degree.png Graphic file (type png)
+<use figures//ac_at_2degree.png>
+Package pdftex.def Info: figures//ac_at_2degree.png  used on input line 483.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//ac_at_10degree.png, id=94, 642.4pt x 481.8pt>
+File: figures//ac_at_10degree.png Graphic file (type png)
+<use figures//ac_at_10degree.png>
+Package pdftex.def Info: figures//ac_at_10degree.png  used on input line 489.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+protocol.tex:495: Undefined control sequence.
+l.495     For temperatures above 15\�
+                                     �C we can no longer observe an action p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+protocol.tex:495: LaTeX Error: Invalid UTF-8 byte "B0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.495     For temperatures above 15\°
+                                      C we can no longer observe an action p...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+protocol.tex:496: Undefined control sequence.
+l.496 ...we do not get am action potential at 37\�
+                                                  �C.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+protocol.tex:496: LaTeX Error: Invalid UTF-8 byte "B0.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.496 ...e do not get am action potential at 37\°
+                                                  C.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[14] [15 <./figures//channel_activation.png (PNG copy)>] [16 <./figures//ac_at_
+2degree.png (PNG copy)> <./figures//ac_at_10degree.png (PNG copy)>]
+<figures//sd_curve.png, id=104, 642.4pt x 481.8pt>
+File: figures//sd_curve.png Graphic file (type png)
+<use figures//sd_curve.png>
+Package pdftex.def Info: figures//sd_curve.png  used on input line 588.
+(pdftex.def)             Requested size: 344.005pt x 258.00673pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...  # Stimulus amplitudes from 0 to 30 μA/
+                                                  cm² in 1 μA/cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...  # Stimulus amplitudes from 0 to 30 μA/
+                                                  cm² in 1 μA/cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...timulus amplitudes from 0 to 30 μA/cm² 
+                                                  in 1 μA/cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte "B2.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...timulus amplitudes from 0 to 30 μA/cm² 
+                                                  in 1 μA/cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...mplitudes from 0 to 30 μA/cm² in 1 μA/
+                                                  cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...mplitudes from 0 to 30 μA/cm² in 1 μA/
+                                                  cm² steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...udes from 0 to 30 μA/cm² in 1 μA/cm² 
+                                                  steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:611: LaTeX Error: Invalid UTF-8 byte "B2.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.611 ...udes from 0 to 30 μA/cm² in 1 μA/cm² 
+                                                  steps
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[17] [18 <./figures//sd_curve.png (PNG copy)>]
+<figures//spiking_probability.png, id=111, 642.4pt x 481.8pt>
+File: figures//spiking_probability.png Graphic file (type png)
+<use figures//spiking_probability.png>
+Package pdftex.def Info: figures//spiking_probability.png  used on input line 6
+41.
+(pdftex.def)             Requested size: 344.005pt x 258.00673pt.
+
+protocol.tex:658: Undefined control sequence.
+l.658 ...a stimulation current of \( I = -0.5 \muA
+                                                   \) plotted over the locat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19 <./figures//spiking_probability.png (PNG copy)>]
+
+protocol.tex:669: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.669 ...ax.set_xlabel('Location along fiber (μm)
+                                                  ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:669: LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.669 ...ax.set_xlabel('Location along fiber (μm)
+                                                  ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+<figures//membrane_voltage.png, id=116, 642.4pt x 481.8pt>
+File: figures//membrane_voltage.png Graphic file (type png)
+<use figures//membrane_voltage.png>
+Package pdftex.def Info: figures//membrane_voltage.png  used on input line 677.
+
+(pdftex.def)             Requested size: 344.005pt x 258.00673pt.
+[20 <./figures//membrane_voltage.png (PNG copy)>]
+
+protocol.tex:695: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695     plt.xlabel('Location along fiber (μm)
+                                                ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:695: LaTeX Error: Invalid UTF-8 byte "BC.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695     plt.xlabel('Location along fiber (μm)
+                                                ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+<figures//activating_function_cathodic.png, id=120, 642.4pt x 481.8pt>
+File: figures//activating_function_cathodic.png Graphic file (type png)
+<use figures//activating_function_cathodic.png>
+Package pdftex.def Info: figures//activating_function_cathodic.png  used on inp
+ut line 703.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//activating_function_anodic.png, id=121, 642.4pt x 481.8pt>
+File: figures//activating_function_anodic.png Graphic file (type png)
+<use figures//activating_function_anodic.png>
+Package pdftex.def Info: figures//activating_function_anodic.png  used on input
+ line 709.
+(pdftex.def)             Requested size: 210.70462pt x 158.02406pt.
+<figures//threshold_point.png, id=122, 484.81125pt x 451.6875pt>
+File: figures//threshold_point.png Graphic file (type png)
+<use figures//threshold_point.png>
+Package pdftex.def Info: figures//threshold_point.png  used on input line 726.
+(pdftex.def)             Requested size: 210.70462pt x 196.31017pt.
+<figures//threshold_disk.png, id=123, 489.32813pt x 451.6875pt>
+File: figures//threshold_disk.png Graphic file (type png)
+<use figures//threshold_disk.png>
+Package pdftex.def Info: figures//threshold_disk.png  used on input line 732.
+(pdftex.def)             Requested size: 210.70462pt x 194.49751pt.
+[21 <./figures//activating_function_cathodic.png (PNG copy)> <./figures//activa
+ting_function_anodic.png (PNG copy)>] [22 <./figures//threshold_point.png> <./f
+igures//threshold_disk.png>]
+
+protocol.tex:771: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.771 ...lX from -3000 to 3000 in steps of 100 µm
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:771: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.771 ...lX from -3000 to 3000 in steps of 100 µm
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:780: LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780         plt.xlabel('Cell X Coordinate (µm)
+                                                 ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+protocol.tex:780: LaTeX Error: Invalid UTF-8 byte "B5.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780         plt.xlabel('Cell X Coordinate (µm)
+                                                 ')
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+<figures//spiking_activity.png, id=132, 642.4pt x 481.8pt>
+File: figures//spiking_activity.png Graphic file (type png)
+<use figures//spiking_activity.png>
+Package pdftex.def Info: figures//spiking_activity.png  used on input line 789.
+
+(pdftex.def)             Requested size: 344.005pt x 258.00673pt.
+<figures//FE_structure.png, id=133, 384.6872pt x 340.27126pt>
+File: figures//FE_structure.png Graphic file (type png)
+<use figures//FE_structure.png>
+Package pdftex.def Info: figures//FE_structure.png  used on input line 805.
+(pdftex.def)             Requested size: 129.00269pt x 114.11229pt.
+<figures//FE_mesh_1.png, id=134, 411.03563pt x 358.33875pt>
+File: figures//FE_mesh_1.png Graphic file (type png)
+<use figures//FE_mesh_1.png>
+Package pdftex.def Info: figures//FE_mesh_1.png  used on input line 811.
+(pdftex.def)             Requested size: 129.00269pt x 112.46175pt.
+<figures//FE_efield_1.png, id=135, 408.77719pt x 321.45094pt>
+File: figures//FE_efield_1.png Graphic file (type png)
+<use figures//FE_efield_1.png>
+Package pdftex.def Info: figures//FE_efield_1.png  used on input line 817.
+(pdftex.def)             Requested size: 129.00269pt x 101.44395pt.
+[23 <./figures//spiking_activity.png (PNG copy)>]
+<figures//FE_efield_along_fiber_1.png, id=139, 394.47375pt x 338.01282pt>
+File: figures//FE_efield_along_fiber_1.png Graphic file (type png)
+<use figures//FE_efield_along_fiber_1.png>
+Package pdftex.def Info: figures//FE_efield_along_fiber_1.png  used on input li
+ne 828.
+(pdftex.def)             Requested size: 210.70462pt x 180.54366pt.
+<figures//FE_efield_at_electrode_1.png, id=140, 394.47375pt x 336.50719pt>
+File: figures//FE_efield_at_electrode_1.png Graphic file (type png)
+<use figures//FE_efield_at_electrode_1.png>
+Package pdftex.def Info: figures//FE_efield_at_electrode_1.png  used on input l
+ine 834.
+(pdftex.def)             Requested size: 210.70462pt x 179.73944pt.
+File: figures//FE_mesh_1.png Graphic file (type png)
+<use figures//FE_mesh_1.png>
+Package pdftex.def Info: figures//FE_mesh_1.png  used on input line 849.
+(pdftex.def)             Requested size: 129.00269pt x 112.46175pt.
+<figures//FE_mesh_2.png, id=141, 409.53pt x 353.06906pt>
+File: figures//FE_mesh_2.png Graphic file (type png)
+<use figures//FE_mesh_2.png>
+Package pdftex.def Info: figures//FE_mesh_2.png  used on input line 855.
+(pdftex.def)             Requested size: 129.00269pt x 111.21733pt.
+<figures//FE_mesh_3.png, id=142, 409.53pt x 350.05782pt>
+File: figures//FE_mesh_3.png Graphic file (type png)
+<use figures//FE_mesh_3.png>
+Package pdftex.def Info: figures//FE_mesh_3.png  used on input line 861.
+(pdftex.def)             Requested size: 129.00269pt x 110.26878pt.
+ [24 <./figures//FE_structure.png> <./figures//FE_mesh_1.png> <./figures//FE_ef
+ield_1.png> <./figures//FE_efield_along_fiber_1.png> <./figures//FE_efield_at_e
+lectrode_1.png>]
+File: figures//FE_efield_along_fiber_1.png Graphic file (type png)
+<use figures//FE_efield_along_fiber_1.png>
+Package pdftex.def Info: figures//FE_efield_along_fiber_1.png  used on input li
+ne 870.
+(pdftex.def)             Requested size: 129.00269pt x 110.53882pt.
+<figures//FE_efield_along_fiber_2.png, id=152, 395.22656pt x 337.26pt>
+File: figures//FE_efield_along_fiber_2.png Graphic file (type png)
+<use figures//FE_efield_along_fiber_2.png>
+Package pdftex.def Info: figures//FE_efield_along_fiber_2.png  used on input li
+ne 876.
+(pdftex.def)             Requested size: 129.00269pt x 110.08163pt.
+<figures//FE_efield_along_fiber_3.png, id=153, 394.47375pt x 335.00156pt>
+File: figures//FE_efield_along_fiber_3.png Graphic file (type png)
+<use figures//FE_efield_along_fiber_3.png>
+Package pdftex.def Info: figures//FE_efield_along_fiber_3.png  used on input li
+ne 882.
+(pdftex.def)             Requested size: 129.00269pt x 109.55406pt.
+File: figures//FE_efield_at_electrode_1.png Graphic file (type png)
+<use figures//FE_efield_at_electrode_1.png>
+Package pdftex.def Info: figures//FE_efield_at_electrode_1.png  used on input l
+ine 891.
+(pdftex.def)             Requested size: 129.00269pt x 110.04645pt.
+<figures//FE_efield_at_electrode_2.png, id=154, 396.7322pt x 338.01282pt>
+File: figures//FE_efield_at_electrode_2.png Graphic file (type png)
+<use figures//FE_efield_at_electrode_2.png>
+Package pdftex.def Info: figures//FE_efield_at_electrode_2.png  used on input l
+ine 897.
+(pdftex.def)             Requested size: 129.00269pt x 109.90959pt.
+<figures//FE_efield_at_electrode_3.png, id=155, 398.99063pt x 337.26pt>
+File: figures//FE_efield_at_electrode_3.png Graphic file (type png)
+<use figures//FE_efield_at_electrode_3.png>
+Package pdftex.def Info: figures//FE_efield_at_electrode_3.png  used on input l
+ine 903.
+(pdftex.def)             Requested size: 129.00269pt x 109.04211pt.
+ [25 <./figures//FE_mesh_2.png> <./figures//FE_mesh_3.png> <./figures//FE_efiel
+d_along_fiber_2.png> <./figures//FE_efield_along_fiber_3.png>]
+File: figures//FE_efield_1.png Graphic file (type png)
+<use figures//FE_efield_1.png>
+Package pdftex.def Info: figures//FE_efield_1.png  used on input line 959.
+(pdftex.def)             Requested size: 129.00269pt x 101.44395pt.
+<figures//FE_efield_horizontal.png, id=164, 408.77719pt x 314.67563pt>
+File: figures//FE_efield_horizontal.png Graphic file (type png)
+<use figures//FE_efield_horizontal.png>
+Package pdftex.def Info: figures//FE_efield_horizontal.png  used on input line 
+965.
+(pdftex.def)             Requested size: 129.00269pt x 99.3058pt.
+<figures//FE_efield_vertical.png, id=165, 408.02437pt x 310.15875pt>
+File: figures//FE_efield_vertical.png Graphic file (type png)
+<use figures//FE_efield_vertical.png>
+Package pdftex.def Info: figures//FE_efield_vertical.png  used on input line 97
+1.
+(pdftex.def)             Requested size: 129.00269pt x 98.0602pt.
+<figures//FE_all_anodic_loc.png, id=166, 642.4pt x 481.8pt>
+File: figures//FE_all_anodic_loc.png Graphic file (type png)
+<use figures//FE_all_anodic_loc.png>
+Package pdftex.def Info: figures//FE_all_anodic_loc.png  used on input line 980
+.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+<figures//FE_horizontal_anodic_loc.png, id=167, 642.4pt x 481.8pt>
+File: figures//FE_horizontal_anodic_loc.png Graphic file (type png)
+<use figures//FE_horizontal_anodic_loc.png>
+Package pdftex.def Info: figures//FE_horizontal_anodic_loc.png  used on input l
+ine 986.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+<figures//FE_vertical_anodic_loc.png, id=168, 642.4pt x 481.8pt>
+File: figures//FE_vertical_anodic_loc.png Graphic file (type png)
+<use figures//FE_vertical_anodic_loc.png>
+Package pdftex.def Info: figures//FE_vertical_anodic_loc.png  used on input lin
+e 992.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+<figures//FE_all_cathodic_loc.png, id=169, 642.4pt x 481.8pt>
+File: figures//FE_all_cathodic_loc.png Graphic file (type png)
+<use figures//FE_all_cathodic_loc.png>
+Package pdftex.def Info: figures//FE_all_cathodic_loc.png  used on input line 1
+001.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+
+Underfull \hbox (badness 1189) in paragraph at lines 1002--1002
+\OT1/cmr/m/n/10 po-ten-tial ini-tial-iza-tion lo-ca-
+ []
+
+<figures//FE_horizontal_cathodic_loc.png, id=170, 642.4pt x 481.8pt>
+File: figures//FE_horizontal_cathodic_loc.png Graphic file (type png)
+<use figures//FE_horizontal_cathodic_loc.png>
+Package pdftex.def Info: figures//FE_horizontal_cathodic_loc.png  used on input
+ line 1007.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+
+Underfull \hbox (badness 4886) in paragraph at lines 1008--1008
+[]\OT1/cmr/m/n/10 Figure 53: |Ca-thodic ac-
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 1008--1008
+\OT1/cmr/m/n/10 ca-tion for two hor-i-zon-tally
+ []
+
+<figures//FE_vertical_cathodic_loc.png, id=171, 642.4pt x 481.8pt>
+File: figures//FE_vertical_cathodic_loc.png Graphic file (type png)
+<use figures//FE_vertical_cathodic_loc.png>
+Package pdftex.def Info: figures//FE_vertical_cathodic_loc.png  used on input l
+ine 1013.
+(pdftex.def)             Requested size: 129.00269pt x 96.74792pt.
+
+Underfull \hbox (badness 1189) in paragraph at lines 1014--1014
+\OT1/cmr/m/n/10 po-ten-tial ini-tial-iza-tion lo-ca-
+ []
+
+[26 <./figures//FE_efield_at_electrode_2.png> <./figures//FE_efield_at_electrod
+e_3.png>] [27 <./figures//FE_efield_horizontal.png> <./figures//FE_efield_verti
+cal.png> <./figures//FE_all_anodic_loc.png (PNG copy)> <./figures//FE_horizonta
+l_anodic_loc.png (PNG copy)> <./figures//FE_vertical_anodic_loc.png (PNG copy)>
+ <./figures//FE_all_cathodic_loc.png (PNG copy)> <./figures//FE_horizontal_cath
+odic_loc.png (PNG copy)> <./figures//FE_vertical_cathodic_loc.png (PNG copy)>]
+(protocol.aux) ) 
+Here is how much of TeX's memory you used:
+ 7702 strings out of 475389
+ 131164 string characters out of 2777000
+ 1087452 words of memory out of 3000000
+ 28993 multiletter control sequences out of 15000+600000
+ 472200 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,12n,77p,355b,1812s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Robin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1000.pk><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Robin/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Robin/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Rob
+in/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Robin/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Robin/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Robin/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on C:/Users\Robin\Documents\biomedical_engineering\out\protocol.
+pdf (27 pages, 2590940 bytes).
+PDF statistics:
+ 245 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+
