@@ -77,7 +77,7 @@ def visualize_boids(positions, ax):
 
 # Parameters
 N = 300
-vmax = 0.03
+v_max = 0.03
 do = 0.2
 dc = 0.1
 l0, l1, l2, l3, l4 = 0.31, 0.001, 1.2, 2, 1
@@ -93,7 +93,7 @@ ax.set_ylim([-1, 1])
 ax.set_zlim([-1, 1])
 
 for step in range(1000):  # Adjust the number of steps as needed
-    positions, velocities = update_boids(positions, velocities, do, dc, l0, l1, l2, l3, l4, vmax)
+    positions, velocities = update_boids(positions, velocities, do, dc, l0, l1, l2, l3, l4, v_max)
 
     ax.clear()
     visualize_boids(positions, ax)

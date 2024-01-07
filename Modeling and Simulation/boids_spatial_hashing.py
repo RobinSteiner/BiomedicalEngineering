@@ -87,7 +87,7 @@ def visualize_boids(positions, ax):
 
 # Parameters
 N = 500
-vmax = 0.03
+v_max = 0.03
 do = 0.2
 dc = 0.1
 l0, l1, l2, l3, l4 = 0.31, 0.1, 12, 2, 5
@@ -104,9 +104,9 @@ ax.set_ylim([-1, 1])
 ax.set_zlim([-1, 1])
 
 # Simulation loop
-while True:  # Adjust the number of steps as needed
+while True:
     hash_table = spatial_hashing(positions, cell_size)
-    positions, velocities = update_boids(positions, velocities, hash_table, cell_size, do, dc, l0, l1, l2, l3, l4, vmax)
+    positions, velocities = update_boids(positions, velocities, hash_table, cell_size, do, dc, l0, l1, l2, l3, l4, v_max)
     ax.clear()
     visualize_boids(positions, ax)
 
