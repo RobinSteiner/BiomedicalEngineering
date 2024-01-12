@@ -1,0 +1,8 @@
+***** Minimizer is fminsearch
+(A) Objfun at minimum: 1.4115 Parabola parameters a,b,c: 1.3653  -2.6478   1.2408
+(B) Objfun at minimum: 0.9011 Parabola parameters a,b,c: 1.4489  -2.8845   1.1856
+(B) Objfun at minimum: 0.1650 Parabola parameters a,b,c: 1.5116  -3.0428   1.0337
+***** Minimizer is fminunc
+(A) Objfun at minimum: 1.4115 Parabola parameters a,b,c: 1.3653  -2.6478   1.2408
+(B) Objfun at minimum: 0.9033 Parabola parameters a,b,c: 1.4839  -2.8667   1.0838
+(B) Objfun at minimum: 0.2134 Parabola parameters a,b,c: 1.4757  -2.9864   1.1144
