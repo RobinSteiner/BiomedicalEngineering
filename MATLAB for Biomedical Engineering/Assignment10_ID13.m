@@ -7,8 +7,9 @@ obj_funcs = {
     @(p) mean(abs(X(:,2) - (p(1)*X(:,1).^2 + p(2)*X(:,1) + p(3)))),
     @(p) median((X(:,2) - (p(1)*X(:,1).^2 + p(2)*X(:,1) + p(3))).^2)
 };
-% Initial guess
-p0 = [1, 1, 1];
+% Linear regression to find initial guess
+X_transformed = [X(:,1).^2, X(:,1), ones(size(X,1),1)];
+p0 = (X_transformed \ X(:,2))' % Linear regression
 % Minimizers (output is turned off for fminunc)
 options = optimoptions('fminunc', 'Display', 'off');
 minimizers = {{'fminsearch', @fminsearch}, {'fminunc', @(func, p) fminunc(func, p, options)}};
